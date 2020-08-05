@@ -1,9 +1,14 @@
 #!/usr/bin/env python
 import os
 import sys
+import socket
 
 if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "BugOA.settings")
+    if socket.gethostname() == "master":
+        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "setting.develop")
+    else:
+        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "setting.product")
+
     try:
         from django.core.management import execute_from_command_line
     except ImportError:

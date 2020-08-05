@@ -6,7 +6,7 @@
 *$py.class
 
 # django stuff
-BugOA/BugOA/local_settings.py
+setting/develop.py
 
 # database migrations
 */migrations/*.py
