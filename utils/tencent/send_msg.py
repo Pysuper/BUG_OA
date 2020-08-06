@@ -5,7 +5,7 @@
 # @File    : send_msg.py.py
 
 """macOS 错误信息"""
-import ssl
+# import ssl
 # ssl._create_default_https_context = ssl._create_unverified_context
 
 from setting.variable import *

@@ -52,6 +52,21 @@ TEMPLATES = [
     },
 ]
 
+CACHES = {  # 可以使用不同的配置，实现读写分离
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://0.0.0.0:6379/0",  # 安装redis的主机的 IP 和 端口
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+            "CONNECTION_POOL_KWARGS": {
+                "max_connections": 1000,
+                "encoding": 'utf-8'
+            },
+            "PASSWORD": "root"  # redis密码
+        }
+    }
+}
+
 sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 
 # 配置静态文件
