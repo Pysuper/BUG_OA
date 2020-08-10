@@ -4,6 +4,12 @@
 # @Author  : Zheng Xingtao
 # @File    : variable.py.py
 
+SMS_TEMPLATES = {
+    "register": "682840",
+    "login": "682843",
+    "update": "682844",
+    "love": "683020"
+}
 
 TENCENT_SMS_APPID = 1400407994
 TENCENT_SMS_APPKEY = "0dd1c9e4004fe503700c08d4e4d5098e"

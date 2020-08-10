@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../static/js/jquery-3.4.1.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            width: 800px;
+            height: 500px;
+            margin: 0 auto;
+            position: relative;
+            background-color: black;
+        }
+
+        .line {
+            position: absolute;
+            cursor: default;
+        }
+
+        .lineS {
+            font-size: 1px;
+            opacity: 0;
+            border-radius: 2.5px;
+            position: absolute;
+            transition:1s;
+            position: absolute;
+            cursor: default;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+
+    </div>
+</body>
+<script>
+    //注：！！p标签必须绝对定位，否则设置显示位置将不起作用，
+    //为什么需要删除元素，如果不删除，页面元素过多，浪费资源
+
+
+    //适配浏览器宽高
+$('#container').width($(window).width())
+$('#container').height($(window).height())
+
+    var container = $('#container'); //获取容器
+    var divLeft = $(container).offset().left//获取容器距离左侧的距离
+    var divTop = $(container).offset().top//获取容器距离上方的距离
+    var timer;//定时器一，更改p的样式
+    var timer2;//定时器二，回收生成的p
+    //符号数组
+    var shape = ['♥','♫','❤','✿','❉','♣','☀','☺','◐','☑','√','×','☒','☹','☾','☀','▂','▃','▅','♫','§','〼','¤','۞','℗','℗','®','®','卐','卍','☋','♊']
+    //将鼠标移动时间绑定到容器上
+    $(container).mousemove(function (event) {
+        event = event || window.event//赋值event
+        var scrollX = document.documentElement.scrollLeft || document.body.scrollLeft;//获取当前导航栏距离左侧的距离
+        var scrollY = document.documentElement.scrollTop || document.body.scrollTop;//获取导航栏距离上方的距离
+        
+        //获取到当前鼠标在容器中的位置
+        var x = event.clientX + scrollX - divLeft;//鼠标x可视位置-导航栏x距离-容器距离左侧的位置
+        var y = event.clientY + scrollY - divTop;//同上，x变y
+        
+        //生成红蓝绿随机颜色
+        var red = parseInt(Math.random() * 257).toString(16);
+        var blue = parseInt(Math.random() * 257).toString(16);
+        var green = parseInt(Math.random() * 257).toString(16);
+        var color = '#' + red + blue + green;
+        //生成随机字体大小
+        var size = (Math.random()*(30-1+1)+1)+'px'
+        //随机符号
+        var shapeInedx = parseInt(Math.random()*(shape.length-1-0+1)+0)
+        //p标签，绑定文字
+        var p = '<p class="line">'+shape[shapeInedx]+'</p>'
+        //设置p标签随机出的颜色以及字体大小样式，设置p标签显示位置，并且插入到容器中
+        $(container).append($(p).css({
+            "color":color,
+            "font-size":size
+        }).offset({
+            top: y,
+            left: x
+        }))
+
+        //等待10毫秒后执行，防止还未生成就变换看不见的样式
+        setTimeout(() => {
+            timer = setInterval(vanish(), 1000)//每1s执行一次vanish方法，
+        }, 10);
+        //回收p机制，每1s执行一次防止还未显示就被回收
+        setTimeout(() => {
+            timer2 = setInterval(removeDom(),3000)//每3s执行一次删除方法
+        }, 1000);
+      
+    })
+
+    //变换样式方法
+    function vanish() {
+        var pLine = $('.line')[0];//每次获取到第一个样式为初始的p元素
+        $(pLine).removeClass('line')//删除样式
+        $(pLine).addClass('lineS')//填入样式
+
+        if (pLine == undefined) {//判断页面内还有没有初始样式的标签，如果没有，清除timer
+            clearInterval(timer)
+        }
+    }
+
+    //删除元素方法
+    function removeDom() {
+        var pLine = $('.lineS')[0];//获取第一个样式为改变后的p元素
+        $(pLine).remove()//删除
+    }
+</script>
+
+</html>

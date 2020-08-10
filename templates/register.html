@@ -8,6 +8,7 @@
 
 {% block css %}
     <link rel="stylesheet" href="{% static 'css/account.css' %}">
+    <script src="/static/js/digitalrain.js"></script>
 {% endblock %}
 
 {% block content %}
@@ -57,12 +58,16 @@
 
                 // 发送Ajax请求
                 $.ajax({
-                    url: "",
-                    type: "",
-                    data: {k1: 21, k2: 231},
+                    url: "/user/sms/",
+                    type: "GET",
+                    data: {
+                        phone: phone,
+                        req_type: "register"
+                    },
                     success: function (res) {
                         // ajax请求发送成功之后，自动执行的函数
                         // res 就是后台返回的值
+                        console.log(res)
                     }
                 })
             })
