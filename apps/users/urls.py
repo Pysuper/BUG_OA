@@ -9,5 +9,5 @@ from .views import *
 
 urlpatterns = [
     url(r'sms/$', send_sms),
-    url(r'^register/$', register),
+    url(r'^register/$', register, name="register"),
 ]

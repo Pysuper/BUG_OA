@@ -49,7 +49,7 @@ def register(request):
 def index(request):
     # 去连接池中获取一个连接
     conn = get_redis_connection("default")
-    conn.set('nickname', "zhengxingtao", ex=10)
+    conn.set('nickname', "zheng xingtao", ex=10)
     value = conn.get('nickname')
     print(value)
     return HttpResponse("OK")

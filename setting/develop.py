@@ -4,7 +4,7 @@
 # File : develop.py
 # Datetime : 2020/8/5 下午2:39
 
-import os, sys
+import sys
 from .base import *
 
 ALLOWED_HOSTS = ["*", ]
@@ -30,7 +30,6 @@ SMS_TEMPLATES = {
     "update": "682844",
     "love": "683020"
 }
-
 TENCENT_SMS_APPID = 1400407994
 TENCENT_SMS_APPKEY = "0dd1c9e4004fe503700c08d4e4d5098"
 TENCENT_SMS_SIGN = "郑兴涛个人公众号"
@@ -48,9 +47,9 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
-            'builtins': [
-                'django.templatetags.static'
-            ],
+            # 'builtins': [
+            #     'django.templatetags.static'
+            # ],
         },
     },
 ]
@@ -78,5 +77,3 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = (os.path.join(BASE_DIR, 'media'))
-
-print(STATICFILES_DIRS, MEDIA_ROOT)
