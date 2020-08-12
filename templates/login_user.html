@@ -1,0 +1,67 @@
+{% extends 'layout/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    用户登录
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/account.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="account">
+        <div class="title">密码登录</div>
+        <form method="POST" novalidate>
+            {% csrf_token %}
+
+            {% for field in form %}
+                {% if field.name == 'img_code' %}
+                    <div class="form-group">
+                        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                        <div class="row">
+                            <div class="col-md-7">
+                                {{ field }}
+                                <span class="error-msg">{{ field.errors.0 }}</span>
+                            </div>
+                            <div class="col-md-5">
+                                <img src="/user/image/code/" id="imageCode" title="点击更换图片">
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="form-group">
+                        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                        {{ field }}
+                        <span class="error-msg">{{ field.errors.0 }}</span>
+                    </div>
+                {% endif %}
+            {% endfor %}
+
+            <div>
+                <div style="float: right">
+{#                    <a href="{% url "user.login_sms" %}">短信验证码登录？</a>#}
+                    <a href="/user/login/sms/">短信验证码登录？</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-3" style="padding-top: 20px;">
+                    <input type="submit" class="btn btn-primary" value="登  录">
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(function () {
+            $("#imageCode").click(function () {
+                var oldSrc = $(this).attr("src");
+                $(this).attr("src", oldSrc + "?");
+            })
+        })
+    </script>
+{% endblock %}

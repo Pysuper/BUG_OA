@@ -39,6 +39,14 @@
                     </div>
                 {% endif %}
             {% endfor %}
+
+            <div>
+                <div style="float: right">
+{#                    <a href="{% url "login_user" %}">用户名登录？</a>#}
+                    <a href="/user/login/user/">用户名登录？</a>
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col-xs-3" style="padding-top: 20px;">
                     <input id="btnSubmit" type="button" class="btn btn-primary" value="登  录">
