@@ -20,8 +20,8 @@ from django.views.generic.base import TemplateView, RedirectView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', TemplateView.as_view(template_name='index.html'), name='index'), # index页面
-    url(r'^favicon\.ico$', RedirectView.as_view(url=r'static/img/favicon.ico')),    # favicon图标
+    url(r'^$', TemplateView.as_view(template_name='index.html'), name='index'),  # index页面
+    url(r'^favicon\.ico$', RedirectView.as_view(url=r'static/img/favicon.ico')),  # favicon图标
 
     url(r'^user/', include(('users.urls', "user"), namespace="user")),  # 使用namespace， 防止多个app时前缀重名
 ]
