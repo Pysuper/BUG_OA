@@ -15,7 +15,6 @@ class Register(View):
         return render(request, 'register.html', {"form": form})
 
     def post(self, request):
-        print(request.POST)
         form = RegisterModelForm(data=request.POST)
         if form.is_valid():
             form.save()  # 写入数据库==>instance
@@ -31,8 +30,13 @@ class LoginSms(View):
         return render(request, 'login_sms.html', {"form": form})
 
     def post(self, request):
-        form = LoginSmsForm()
+        form = LoginSmsForm(data=request.POST)  # 使用Form校验的时候，要将request的参数发送到Form中
         if form.is_valid():
+            user_obj = form.cleaned_data["phone"]  # 这里获取的就是user的对象==>写入session
+            print(user_obj.username)
+
+            # request.session["user_id"] = user_obj.id
+            # request.session["user_name"] = user_obj.username
             return JsonResponse({"status": True, "data": "/"})
         return JsonResponse({"status": False, "error": form.errors})
 
@@ -40,12 +44,7 @@ class LoginSms(View):
 def send_sms(request):
     """发送短信"""
     form = SendSmsForm(request, data=request.GET)
-
     # 只是校验手机号：不能为空, 格式是否正确
     if form.is_valid():
-        user_obj = form.cleaned_data["phone"]  # 这里获取的就是user的对象==>写入session
-
-        # request.session["user_id"] = user_obj.id
-        # request.session["user_name"] = user_obj.username
         return JsonResponse({"status": True})
     return JsonResponse({"status": False, "error": form.errors})
