@@ -94,25 +94,17 @@ class RegisterModelForm(BootStrapForm, forms.ModelForm):
             return code
 
         conn = get_redis_connection()
-        redis_code = conn.get(phone)
 
-        status = 0
+        redis_code = conn.get(phone)
         if not redis_code:
-            status = 1
-            self.add_error("code", "验证码失效或未发送，请重新发送")
-            # raise ValidationError("验证码失效或未发送，请重新发送")
+            raise ValidationError("验证码失效或未发送，请重新发送")
 
         redis_str_code = redis_code.decode('utf-8')
         if code.strip() != redis_str_code:
-            status = 1
-            # raise ValidationError("验证码错误，请重新输入")
-            self.add_error("code", "验证码失效或未发送，请重新发送")
+            raise ValidationError("验证码错误，请重新输入")
 
         # TODO： 当我们获取数据， 校验完成之后，删除redis中的数据
-        print(status)
-        if status == 0:
-            # 只有正确的时候，才删除验证码
-            conn.delete(phone)
+        # conn.delete(phone)
 
         return code
 
@@ -153,19 +145,19 @@ class SendSmsForm(forms.Form):
         # 写入redis
         conn = get_redis_connection()
         conn.set(phone, code, ex=60)
-
         print(code)
         return phone
 
 
 class LoginSmsForm(BootStrapForm, forms.Form):
     phone = forms.CharField(label="手机号码", validators=[RegexValidator(r'^(1[3|4|5|6|7|8|9])\d{9}$', '手机号码格式错误')])
-    code = forms.CharField(label="验证码", widget=forms.TextInput())
+    code = forms.CharField(label="验证码", widget=forms.TextInput)
 
     def clean_phone(self):
         phone = self.cleaned_data["phone"]
-        # exists = UserInfo.objects.filter(phone=phone).exists()
-        user_obj = UserInfo.objects.filter(phone=phone).first()
+        # exists = UserInfo.objects.filter(phone=phone).exists()    # 返回的是一个字符串
+        user_obj = UserInfo.objects.filter(phone=phone).first()   # 返回的是一个对象
+        print(user_obj)
         if not user_obj:
             raise ValidationError("当前手机号码不存在")
         return user_obj
