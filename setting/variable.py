@@ -6,7 +6,7 @@
 
 SMS_TEMPLATES = {
     "register": "682840",
-    "login": "682843",
+    "login": "682840",
     "update": "682844",
     "love": "683020"
 }
