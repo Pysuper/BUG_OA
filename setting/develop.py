@@ -69,6 +69,17 @@ CACHES = {  # 可以使用不同的配置，实现读写分离
     }
 }
 
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'middleware.auth.AuthMiddleware'  # 手动实现中间件
+]
+
 sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 
 # 配置静态文件
@@ -77,3 +88,6 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = (os.path.join(BASE_DIR, 'media'))
+
+# 图片验证码中字体文件的路径
+TTF_PATH = os.path.join(BASE_DIR, 'static/ttf/')
