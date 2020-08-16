@@ -1,10 +1,13 @@
+import uuid
 from io import BytesIO
 from .models import UserInfo
+from datetime import datetime
 from django.db.models import Q
 from utils.image_code import check_code
 from django.views.generic.base import View
 from django.shortcuts import render, redirect
 from django.http import JsonResponse, HttpResponse
+from transac.models import Transacation, PricePolicy
 from .user_forms import RegisterModelForm, SendSmsForm, LoginSmsForm, LoginUserForm
 
 
@@ -22,8 +25,22 @@ class Register(View):
     @staticmethod
     def post(request):
         form = RegisterModelForm(data=request.POST)
+
         if form.is_valid():
-            form.save()  # 写入数据库==>instance
+            # 在这里添加用户交易记录
+            instance = form.save()  # 写入数据库==>instance
+            policy_obj = PricePolicy.objects.filter(category=1, title="个人免费版")
+
+            Transacation.objects.create(
+                status=2,
+                order=str(uuid.uuid4()),
+                user=instance,
+                pro_policy=policy_obj,
+                count=0,
+                price=0,
+                start_datatime=datetime.now(),
+
+            )
             return JsonResponse({"status": True, "data": "/user/login/sms/"})
         return JsonResponse({"status": False, "error": form.errors})
 
