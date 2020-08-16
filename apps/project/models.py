@@ -18,6 +18,13 @@ class Project(models.Model):
     creator = models.ForeignKey(verbose_name="创建者", to="UserInfo")
     create_time = models.DateTimeField(verbose_name="创建时间", auto_now_add=True)
 
+    # 如果多对多的时候
+    # 好处不大----查询的时候可以直接查询， 增加、删除、修改 都无法完成
+    # 第三张关联表里面只有两个表的id==> 可以使用ManyToManyField
+    # 第三张表中不止两个id的时候，可以使用through指定关联哪张表，同时使用through_fields指定管理的是哪些字段（这时候不会主动创建第三张表）
+    # 使用through_fields, 对字段的顺序有要求，project-user， 另一张表里也要遵循这个顺序
+    # project_user = models.ManyToManyField(to="UserInfo", through="ProjectUser", through_fields=("project", "user))
+
 
 class ProjectUser(models.Model):
     """项目参与者"""
