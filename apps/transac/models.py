@@ -1,4 +1,5 @@
 from django.db import models
+from users.models import UserInfo
 
 
 # Create your models here.
@@ -27,7 +28,7 @@ class Transacation(models.Model):
     status = models.SmallIntegerField(verbose_name="支付状态", choices=status_choice)
 
     order = models.CharField(verbose_name="订单号", max_length=64, unique=True)  # unique唯一索引
-    user = models.ForeignKey(verbose_name="用户", to="UserInfo")
+    user = models.ForeignKey(UserInfo, verbose_name="用户")
     pro_policy = models.ForeignKey(verbose_name="价格策略", to="PricePolicy")
 
     count = models.IntegerField(verbose_name="数量(年)", help_text="0表示无限期")
