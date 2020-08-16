@@ -91,3 +91,14 @@ MEDIA_ROOT = (os.path.join(BASE_DIR, 'media'))
 
 # 图片验证码中字体文件的路径
 TTF_PATH = os.path.join(BASE_DIR, 'static/ttf/')
+
+# 项目颜色选择
+COLOR_CHOICES = (
+    (1, "#56b8eb"),  # 56b8eb
+    (2, "#f28033"),  # f28033
+    (3, "#ebc656"),  # ebc656
+    (4, "#a2d148"),  # a2d148
+    (5, "#20BFA4"),  # #20BFA4
+    (6, "#7461c2"),  # 7461c2,
+    (7, "#20bfa3"),  # 20bfa3,
+)
