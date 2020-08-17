@@ -5,11 +5,6 @@
 # Datetime : 2020/8/11 下午3:54
 
 
-
-
-
-
-
 class BootStrapForm(object):
     """使用多继承完成每个Form添加HTML的动作"""
 
