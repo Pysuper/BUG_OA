@@ -73,10 +73,11 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    # 'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
     'middleware.auth.AuthMiddleware'  # 手动实现中间件
 ]
 
@@ -102,3 +103,7 @@ COLOR_CHOICES = (
     (6, "#7461c2"),  # 7461c2,
     (7, "#20bfa3"),  # 20bfa3,
 )
+
+# CORS
+CORS_ORIGIN_WHITELIST = ('127.0.0.1:8090', 'localhost:8090', '0.0.0.0:8090',)
+CORS_ALLOW_CREDENTIALS = True  # 允许携带cookie

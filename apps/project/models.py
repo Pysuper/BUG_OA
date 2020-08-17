@@ -16,7 +16,7 @@ class Project(models.Model):
     region = models.CharField(verbose_name="腾讯对象存储区域", max_length=32)
 
     join_count = models.SmallIntegerField(verbose_name="参与人数", default=1)
-    creator = models.ForeignKey(UserInfo, verbose_name="创建者")
+    creator = models.ForeignKey(UserInfo, verbose_name="创建者", on_delete=models.CASCADE)
     create_time = models.DateTimeField(verbose_name="创建时间", auto_now_add=True)
 
     # 如果多对多的时候
@@ -29,8 +29,8 @@ class Project(models.Model):
 
 class ProjectUser(models.Model):
     """项目参与者"""
-    user = models.ForeignKey(UserInfo, verbose_name="项目参与者")
-    project = models.ForeignKey(verbose_name="项目名称", to="Project")
+    user = models.ForeignKey(UserInfo, verbose_name="项目参与者", on_delete=models.CASCADE)
+    project = models.ForeignKey(Project, verbose_name="项目名称", on_delete=models.CASCADE)
 
     star = models.BooleanField(verbose_name="星标", default=False)
 
