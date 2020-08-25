@@ -5,10 +5,10 @@
 # @File    : variable.py.py
 
 SMS_TEMPLATES = {
-    "register": "682840",
-    "login": "682840",
+    "register": "682844",
+    "login": "682844",
     "update": "682844",
-    "love": "683020"
+    "more":["682844", "682843", "682840"]
 }
 
 TENCENT_SMS_APPID = 1400407994
