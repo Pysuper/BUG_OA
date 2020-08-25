@@ -26,7 +26,7 @@
                                 <span class="error-msg">{{ field.errors.0 }}</span>
                             </div>
                             <div class="col-md-5">
-                                <img src="/user/image/code/" id="imageCode" title="点击更换图片">
+                                <img src="{% url 'user:image_code' %}" id="imageCode" title="点击更换图片">
                             </div>
                         </div>
                     </div>
@@ -42,7 +42,7 @@
             <div>
                 <div style="float: right">
 {#                    <a href="{% url "user.login_sms" %}">短信验证码登录？</a>#}
-                    <a href="/user/login/sms/">短信验证码登录？</a>
+                    <a href="{% url 'user:login_sms' %}">短信验证码登录？</a>
                 </div>
             </div>
 

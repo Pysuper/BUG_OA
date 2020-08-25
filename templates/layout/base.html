@@ -53,12 +53,12 @@
                             <li><a href="{% url 'project:list' %}">管理中心</a></li>
                             <li><a href="#">个人信息</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="/user/logout/">退出登录</a></li>
+                            <li><a href="{% url 'user:logout' %}">退出登录</a></li>
                         </ul>
                     </li>
                 {% else %}
-                    <li><a href="/user/login/user/">登录</a></li>
-                    <li><a href="/user/register/">注册</a></li>
+                    <li><a href="{% url 'user:login_user' %}">登录</a></li>
+                    <li><a href="{% url 'user:register' %}">注册</a></li>
                 {% endif %}
 
             </ul>

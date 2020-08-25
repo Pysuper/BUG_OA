@@ -61,7 +61,7 @@
             $('#btnSubmit').click(function () {
                 $(".error-msg").empty()
                 $.ajax({
-                    url: "/user/register/",
+                    url: "{% url 'user:register' %}",
                     type: "POST",
                     data: $('#regForm').serialize(),  // 收集表单中的数据(找到每一个字段) + csrf_token
                     dataType: "JSON",
@@ -85,7 +85,7 @@
                 var phone = $('#id_phone').val()
 
                 $.ajax({
-                    url: "/user/sms/",
+                    url: "{% url 'user:send_sms' %}",
                     type: "GET",
                     data: {
                         phone: phone,

@@ -43,7 +43,7 @@
             <div>
                 <div style="float: right">
 {#                    <a href="{% url "login_user" %}">用户名登录？</a>#}
-                    <a href="/user/login/user/">用户名登录？</a>
+                    <a href="{% url 'user:login_user' %}">用户名登录？</a>
                 </div>
             </div>
 
@@ -69,7 +69,7 @@
             $('#btnSubmit').click(function () {
                 $(".error-msg").empty()
                 $.ajax({
-                    url: "/user/login/sms/",
+                    url: "{% url 'user:login_sms' %}",
                     type: "POST",
                     data: $('#smsForm').serialize(),  // 收集表单中的数据(找到每一个字段) + csrf_token
                     dataType: "JSON",
@@ -93,7 +93,7 @@
                 var phone = $('#id_phone').val()
 
                 $.ajax({
-                    url: "/user/sms/",
+                    url: "{% url 'user:send_sms' %}",
                     type: "GET",
                     data: {
                         phone: phone,
