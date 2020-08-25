@@ -9,6 +9,6 @@ from .views import *
 from django.conf.urls import url
 
 urlpatterns = [
-    url(r'^list/$', project_list, name="list"),
+    url(r'^list/$', ProjectInfo.as_view(), name="list"),
 
 ]
