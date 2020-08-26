@@ -8,16 +8,21 @@
 from django import forms
 from project.models import Project
 from utils.bootstrap import BootStrapForm
+from utils.widgets import ColorRadioSelect
 from django.core.exceptions import ValidationError
 
+
 class ProjectModelForm(BootStrapForm, forms.ModelForm):
+    bootstrap_class_exclude = ["color"]
+
     # desc = forms.CharField(widget=forms.Textarea())
 
     class Meta:
         model = Project
         fields = ["name", "color", "desc"]
         widgets = {
-            "desc": forms.Textarea
+            "desc": forms.Textarea,
+            "color": ColorRadioSelect   # TODO: 这里找不到指定渲染的模板文件
         }
 
     def __init__(self, request, *args, **kwargs):
@@ -43,8 +48,6 @@ class ProjectModelForm(BootStrapForm, forms.ModelForm):
         # 现在已创建的项目个数
         # 可以用户中添加一个字段，这样就不需要每次查询了
         now_count = Project.objects.filter(creator=current_user).count()
-
-        print(now_count , most_num)
 
         if now_count >= most_num:
             raise ValidationError("项目个数已超限，请购买套餐！")
