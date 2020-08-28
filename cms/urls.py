@@ -24,5 +24,6 @@ urlpatterns = [
     url(r'^favicon\.ico$', RedirectView.as_view(url=r'static/img/favicon.ico')),  # favicon图标
 
     url(r'^user/', include(('users.urls', "user"), namespace="user")),  # 使用namespace， 防止多个app时前缀重名
-    url(r'^project/', include(('project.urls', "user"), namespace="project")),
+    url(r'^project/', include(('project.urls', "project"), namespace="project")),
+    url(r'^manage/(?P<project_id>\d+)/', include(('manages.urls', "manages"), namespace="manages")),
 ]

@@ -3,12 +3,14 @@
 # @Time    : 2020/8/13 上午1:41
 # @Author  : Zheng Xingtao
 # @File    : auth.py
-from datetime import datetime
 
+
+from datetime import datetime
 from users.models import UserInfo
 from django.shortcuts import redirect
-from transac.models import Transaction, PricePolicy
+from transac.models import Transaction
 from setting.base import WHITE_REGEX_URL_LIST
+from project.models import Project, ProjectUser
 from django.utils.deprecation import MiddlewareMixin
 
 
@@ -20,9 +22,16 @@ class Tracer(object):
     def __init__(self):
         self.user = None
         self.price_policy = None
+        self.project = None
 
 
 class AuthMiddleware(MiddlewareMixin):
+    """
+    用户校验的中间件
+    1. process_request
+    2. process_view
+    """
+
     @staticmethod
     def process_request(request):
 
@@ -83,3 +92,24 @@ class AuthMiddleware(MiddlewareMixin):
             else:
                 request.price_policy = transaction_obj.price_policy
         """
+
+    @staticmethod
+    def process_view(request, view, args, kwargs):
+        # 判断URL是否是以manage开头
+        if not request.path_info.startswith("/manage/"):
+            return
+
+        # 如果是则判断项目是否是我自己的项目 or 参与
+        project_id = kwargs.get("project_id")
+        project_obj = Project.objects.filter(creator=request.tracer.user, id=project_id).first()
+        if project_obj:
+            request.tracer.project = project_obj
+            return  # 是我创建的项目，通过
+
+        # 是否是我参与的项目
+        project_user_obj = ProjectUser.objects.filter(user=request.tracer.user, project_id=project_id).first()
+        if project_user_obj:
+            request.tracer.project = project_user_obj.project
+            return  # 是我参加的项目
+
+        return redirect('/project/list/')

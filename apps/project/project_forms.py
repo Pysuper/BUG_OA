@@ -7,6 +7,7 @@
 
 from django import forms
 from project.models import Project
+from django.forms import RadioSelect
 from utils.bootstrap import BootStrapForm
 from utils.widgets import ColorRadioSelect
 from django.core.exceptions import ValidationError
@@ -22,7 +23,7 @@ class ProjectModelForm(BootStrapForm, forms.ModelForm):
         fields = ["name", "color", "desc"]
         widgets = {
             "desc": forms.Textarea,
-            "color": ColorRadioSelect   # TODO: 这里找不到指定渲染的模板文件
+            "color": RadioSelect()  # 这里应该使用ColorRadioSelect， 但是找不到指定渲染的模板文件
         }
 
     def __init__(self, request, *args, **kwargs):
