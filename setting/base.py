@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'transac.apps.TransacConfig',
     'project.apps.ProjectConfig',
+    'manages.apps.ManagesConfig',
+    'wiki.apps.WikiConfig',
 
     'rest_framework',
 ]

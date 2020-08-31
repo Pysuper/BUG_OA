@@ -41,7 +41,7 @@ def manage_menu_list(request):
             "url": reverse("manages:file", kwargs={"project_id": project_id})
         }, {
             "title": "WiKi",
-            "url": reverse("manages:wiki", kwargs={"project_id": project_id})
+            "url": reverse("manages:wiki:home", kwargs={"project_id": project_id})
         }, {
             "title": "设置",
             "url": reverse("manages:setting", kwargs={"project_id": project_id})

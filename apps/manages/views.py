@@ -19,9 +19,5 @@ def file(request, project_id):
     return render(request, 'manages/file.html')
 
 
-def wiki(request, project_id):
-    return render(request, 'manages/wiki.html')
-
-
 def setting(request, project_id):
     return render(request, 'manages/setting.html')
