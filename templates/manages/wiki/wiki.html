@@ -54,10 +54,18 @@
                 </div>
 
                 <div class="function">
-                    <a type="button" class="btn btn-success btn-xs"
-                       href="{% url 'manages:wiki:add' project_id=request.tracer.project.id %}">
+                    <a type="button" class="btn btn-success btn-xs" href="{% url 'manages:wiki:add' project_id=request.tracer.project.id %}">
                         <i class="fa fa-plus-circle" aria-hidden="true"> 新建</i>
                     </a>
+
+                    {% if wiki_obj %}
+                        <a type="button" class="btn btn-primary btn-xs" href="{% url 'manages:wiki:edit' project_id=request.tracer.project.id %}">
+                            <i class="fa fa-edit" aria-hidden="true"> 编辑</i>
+                        </a>
+                        <a type="button" class="btn btn-danger btn-xs" href="{% url 'manages:wiki:delete' project_id=request.tracer.project.id wiki_id=wiki_obj.id %}">
+                            <i class="fa fa-trash" aria-hidden="true"> 删除</i>
+                        </a>
+                    {% endif %}
                 </div>
             </div>
 
@@ -69,12 +77,16 @@
                 </div>
 
                 <div class="col-sm-9 content">
-                    <div style="text-align: center; margin-top: 50px">
-                        <h4>《 {{ request.tracer.project.name }} 》 Wiki文档库</h4>
-                        <a href="{% url 'manages:wiki:add' project_id=request.tracer.project.id %}">
-                            <i class="fa fa-plus-circle" aria-hidden="true"> 新建文章</i>
-                        </a>
-                    </div>
+                    {% if wiki_obj %}
+                        {{ wiki_obj.content }}
+                    {% else %}
+                        <div style="text-align: center; margin-top: 50px">
+                            <h4>《 {{ request.tracer.project.name }} 》 Wiki文档库</h4>
+                            <a href="{% url 'manages:wiki:add' project_id=request.tracer.project.id %}">
+                                <i class="fa fa-plus-circle" aria-hidden="true"> 新建文章</i>
+                            </a>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -83,6 +95,9 @@
 
 {% block js %}
     <script>
+
+        var WIKI_DETAIL_URL = "{% url 'manages:wiki:home' project_id=request.tracer.project.id %}";
+
         $(function () {
             initCatalog();
         })
@@ -96,19 +111,11 @@
                     if (res.status) {
                         // 左侧目录的父子级
                         $.each(res.data, function (index, item) {
+                            var href = WIKI_DETAIL_URL + "?wiki_id=" + item.id;
+                            var li = $("<li>").attr("id", "id_" + item.id).append($("<a>").text(item.title).attr("href", href)).append($("<ul>"));
                             if (!item.parent_id) {
-                                li = $("<li>").attr("id", "id_" + item.id).append(
-                                    $("<a>").text(item.title)
-                                ).append(
-                                    $("<ul>")
-                                );
                                 $("#catalog").append(li);
                             } else {
-                                li = $("<li>").attr("id", "id_" + item.id).append(
-                                    $("<a>").text(item.title)
-                                ).append(
-                                    $("<ul>")
-                                );
                                 $("#id_" + item.parent_id).children('ul').append(li)
                             }
                         })

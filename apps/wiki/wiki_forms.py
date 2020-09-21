@@ -13,7 +13,7 @@ from utils.bootstrap import BootStrapForm
 class WikiModelForm(BootStrapForm, forms.ModelForm):
     class Meta:
         model = Wiki
-        exclude = ['project']  # 移除这个，显示其他的
+        exclude = ['project', 'depth']  # 移除这个，显示其他的
 
     def __init__(self, request, *args, **kwargs):
         super().__init__(*args, **kwargs)

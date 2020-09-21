@@ -10,6 +10,8 @@ from django.conf.urls import url
 
 urlpatterns = [
     url(r'^$', wiki, name="home"),  # 再做一次路由分发
-    url(r'add/', AddWiki.as_view(), name="add"),  # 再做一次路由分发
-    url(r'catalog/', catalog, name="catalog"),  # 再做一次路由分发
+    url(r'add/', AddWiki.as_view(), name="add"),
+    url(r'catalog/', catalog, name="catalog"),
+    url(r'delete/(?P<wiki_id>\d+)/', delete_wiki, name="delete"),
+    url(r'edit/(?P<wiki_id>\d+)/', edit_wiki, name="edit"),
 ]
