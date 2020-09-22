@@ -1,10 +1,12 @@
 {% extends 'layout/base_after.html' %}
+{% load static %}
 
 {% block title %}
     ADD WIKI
 {% endblock %}
 
 {% block css %}
+    <link rel="stylesheet" href="{% static 'plugin/editor-md/css/editormd.min.css' %}">
     <style>
         .panel-default {
             margin-top: 10px;
@@ -55,6 +57,9 @@
             padding: 0;
         }
 
+        .editormd-fullscreen{
+            z-index: 1001;
+        }
     </style>
 {% endblock %}
 
@@ -85,11 +90,21 @@
                     <form method="post">
                         {% csrf_token %}
                         {% for field in form %}
-                            <div class="form-group">
-                                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-                                {{ field }}
-                                <span class="error-msg">{{ field.errors.0 }}</span>
-                            </div>
+                            {% if field.name == "content" %}
+                                <div class="form-group">
+                                    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                                    <div id="editor">
+                                        {{ field }}
+                                    </div>
+                                    <span class="error-msg">{{ field.errors.0 }}</span>
+                                </div>
+                            {% else %}
+                                <div class="form-group">
+                                    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                                    {{ field }}
+                                    <span class="error-msg">{{ field.errors.0 }}</span>
+                                </div>
+                            {% endif %}
                         {% endfor %}
                         <button type="submit" class="btn btn-default">提交</button>
                     </form>
@@ -100,13 +115,23 @@
 {% endblock %}
 
 {% block js %}
+    <script src="{% static 'plugin/editor-md/editormd.min.js' %}"></script>
     <script>
 
         var WIKI_DETAIL_URL = "{% url 'manages:wiki:home' project_id=request.tracer.project.id %}";
 
         $(function () {
             initCatalog();
-        })
+            initEditorMd(); // 初始化MD编辑器
+        });
+
+        function initEditorMd() {
+            editormd('editor', {
+                placeholder: "请输入内容",
+                height: 500,
+                path: "{% static 'plugin/editor-md/lib/' %}",
+            })
+        }
 
         function initCatalog() {
             $.ajax({
@@ -131,5 +156,6 @@
                 }
             })
         }
+
     </script>
 {% endblock %}
