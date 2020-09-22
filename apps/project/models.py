@@ -12,6 +12,7 @@ class Project(models.Model):
     user_space = models.IntegerField(verbose_name="项目已使用空间", default=0)
     star = models.BooleanField(verbose_name="星标", default=0)
 
+    # 为每一个项目在COS中创建一个桶
     bucket = models.CharField(verbose_name="腾讯对象存储桶", max_length=128)
     region = models.CharField(verbose_name="腾讯对象存储区域", max_length=32)
 
