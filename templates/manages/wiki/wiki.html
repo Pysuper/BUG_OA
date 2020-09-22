@@ -59,7 +59,7 @@
                     </a>
 
                     {% if wiki_obj %}
-                        <a type="button" class="btn btn-primary btn-xs" href="{% url 'manages:wiki:edit' project_id=request.tracer.project.id %}">
+                        <a type="button" class="btn btn-primary btn-xs" href="{% url 'manages:wiki:edit' project_id=request.tracer.project.id wiki_id=wiki_obj.id %}">
                             <i class="fa fa-edit" aria-hidden="true"> 编辑</i>
                         </a>
                         <a type="button" class="btn btn-danger btn-xs" href="{% url 'manages:wiki:delete' project_id=request.tracer.project.id wiki_id=wiki_obj.id %}">

@@ -33,7 +33,6 @@
         .title_list ul a {
             display: block;
             padding: 5px 0;
-
         }
 
         .content {
@@ -102,6 +101,9 @@
 
 {% block js %}
     <script>
+
+        var WIKI_DETAIL_URL = "{% url 'manages:wiki:home' project_id=request.tracer.project.id %}";
+
         $(function () {
             initCatalog();
         })
@@ -115,19 +117,11 @@
                     if (res.status) {
                         // 左侧目录的父子级
                         $.each(res.data, function (index, item) {
+                            var href = WIKI_DETAIL_URL + "?wiki_id=" + item.id;
+                            var li = $("<li>").attr("id", "id_" + item.id).append($("<a>").text(item.title).attr("href", href)).append($("<ul>"));
                             if (!item.parent_id) {
-                                li = $("<li>").attr("id", "id_" + item.id).append(
-                                    $("<a>").text(item.title)
-                                ).append(
-                                    $("<ul>")
-                                );
                                 $("#catalog").append(li);
                             } else {
-                                li = $("<li>").attr("id", "id_" + item.id).append(
-                                    $("<a>").text(item.title)
-                                ).append(
-                                    $("<ul>")
-                                );
                                 $("#id_" + item.parent_id).children('ul').append(li)
                             }
                         })
