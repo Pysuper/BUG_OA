@@ -57,7 +57,7 @@
             padding: 0;
         }
 
-        .editormd-fullscreen{
+        .editormd-fullscreen {
             z-index: 1001;
         }
     </style>
@@ -119,6 +119,7 @@
     <script>
 
         var WIKI_DETAIL_URL = "{% url 'manages:wiki:home' project_id=request.tracer.project.id %}";
+        var WIKI_UPLOAD_URL = "{% url 'manages:wiki:upload' project_id=request.tracer.project.id %}";
 
         $(function () {
             initCatalog();
@@ -130,6 +131,9 @@
                 placeholder: "请输入内容",
                 height: 500,
                 path: "{% static 'plugin/editor-md/lib/' %}",
+                imageUpload: true,
+                imageFormats: ['jpg', 'jpeg', 'png', 'gif'],
+                imageUploadURL: WIKI_UPLOAD_URL,
             })
         }
 

@@ -1,9 +1,13 @@
 from .models import Wiki
+from utils.encrypt import uid
 from django.urls import reverse
 from django.http import JsonResponse
 from .wiki_forms import WikiModelForm
+from utils.tencent.cos import upload_image
 from django.views.generic.base import View
 from django.shortcuts import render, redirect
+from setting.variable import TENCENT_COS_REGION
+from django.views.decorators.csrf import csrf_exempt
 from rest_framework.viewsets import ViewSet, ModelViewSet
 
 
@@ -90,3 +94,28 @@ def catalog(request, project_id):
     # data = Wiki.objects.filter(project=request.tracer.project).values('id', 'title', 'parent_id')
     data = Wiki.objects.filter(project=request.tracer.project).values('id', 'title', 'parent_id').order_by("depth", "id")
     return JsonResponse({"status": True, "data": list(data)})
+
+
+@csrf_exempt  # 免除CSRF认证
+def wiki_upload(request, project_id):
+    """MarkDown插件是上传图片"""
+    result = {
+        "success": 0,
+        "message": None,
+        "url": None
+    }
+    image_obj = request.FILES.get("editormd-image-file")
+
+    if image_obj:
+        # 将图片对象，上传到桶中
+        bucket = request.tracer.project.bucket
+        ext = image_obj.name.rsplit('.')[-1]
+        image_name = "{}.{}".format(uid(request.tracer.user.phone), ext)
+        image_url = upload_image(TENCENT_COS_REGION, bucket, image_obj, image_name)
+
+        # 将图片上传到桶之后，返回数据到MarkDown
+        result["success"] = 1
+        result["url"] = image_url
+        return JsonResponse(result)
+    result["message"] = "文件不存在！"
+    return JsonResponse(result)

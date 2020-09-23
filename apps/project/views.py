@@ -1,9 +1,12 @@
+from time import time
 from .models import Project, ProjectUser
 from django.views.generic.base import View
 from rest_framework.viewsets import ViewSet
+from utils.tencent.cos import create_bucket
 from .project_forms import ProjectModelForm
 from django.shortcuts import render, redirect
 from django.http import JsonResponse, HttpResponse
+from setting.variable import TENCENT_COS_REGION, TENCENT_COS_API_KEY_ID
 
 
 # Create your views here.
@@ -33,6 +36,18 @@ class ProjectInfo(View):
     def post(self, request):
         form = ProjectModelForm(request, data=request.POST)
         if form.is_valid():
+            # 1. 为每个项目创建一个桶
+            bucket = "{}-{}-{}".format(
+                form.cleaned_data["name"],
+                request.tracer.user.phone,
+                str(int(time()))
+            ) + TENCENT_COS_API_KEY_ID
+            create_bucket(TENCENT_COS_REGION, bucket)
+
+            # 2. 把桶和区域写入到数据库
+            form.instance.bucket = bucket
+            form.instance.region = TENCENT_COS_REGION
+
             # 验证通过：项目名、颜色、描述 + 谁创建的项目(creator)
             form.instance.creator = request.tracer.user  # 当前登录的用户
             form.save()  # 创建项目

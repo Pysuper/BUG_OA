@@ -108,3 +108,8 @@ COLOR_CHOICES = (
 # CORS
 CORS_ORIGIN_WHITELIST = ('127.0.0.1:8090', 'localhost:8090', '0.0.0.0:8090',)
 CORS_ALLOW_CREDENTIALS = True  # 允许携带cookie
+
+try:
+    from .variable import *
+except:
+    pass

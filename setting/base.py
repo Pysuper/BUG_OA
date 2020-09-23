@@ -133,6 +133,10 @@ WHITE_REGEX_URL_LIST = [
     "/user/login/user/",
 ]
 
+# 替换为COS的ID和KEY
+secretId = "COS的secretId"
+secretKey = "COS的secretKey"
+
 # develop.py
 # try:
 #     from .develop import *

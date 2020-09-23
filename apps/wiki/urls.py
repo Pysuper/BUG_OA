@@ -14,4 +14,5 @@ urlpatterns = [
     url(r'catalog/$', catalog, name="catalog"),
     url(r'delete/(?P<wiki_id>\d+)/$', delete_wiki, name="delete"),
     url(r'edit/(?P<wiki_id>\d+)/$', edit_wiki, name="edit"),
+    url(r'upload/$', wiki_upload, name="upload"),
 ]
