@@ -76,7 +76,16 @@
                     <td>{{ item.update_user.username }}</td>
                     <td>{{ item.update_time }}</td>
                     <td>
-                        <a href="">编辑</a>
+                        {% if item.file_type == 2 %}
+                            <a class="btn btn-default btn-xs"
+                               data-toggle="modal"
+                               data-target="#addModal"
+                               data-whatever="修改"
+                               data-fid="{{ item.id }}"
+                               data-name="{{ item.name }}">
+                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                            </a>
+                        {% endif %}
                         <a href="">删除</a>
                     </td>
                 </tr>
@@ -89,13 +98,16 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                     <h4 class="modal-title" id="myModalLabel"></h4>
                 </div>
                 <div class="modal-body">
 
                     <form id="form">
                         {% csrf_token %}
+                        <input class="hide" type="text" name="fid" id="fid">
                         {% for field in form %}
                             <div class="form-group">
                                 <label for="{{ field.id_for_label }}">{{ field.label }}</label>
@@ -126,14 +138,25 @@
 
         function initAddModal() {
             $('#addModal').on('show.bs.modal', function (event) {
-                var button = $(event.relatedTarget)
-                var recipient = button.data('whatever')
-                var modal = $(this)
-                modal.find('.modal-title').text(recipient)
+                var button = $(event.relatedTarget);
+                var recipient = button.data('whatever');
+                var name = button.data('name');
+                var fid = button.data('fid');
+                var modal = $(this);
+                modal.find('.modal-title').text(recipient);
 
-                modal.find('.error-msg').empty();   // 置空错误信息
-                // document.getElementById('form').reset() // 置空表单
-                $('#form')[0].reset();
+                //修改
+                if (fid) {
+                    // 编辑
+                    // $("#id_name").val(name)
+                    modal.find("#id_name").val(name)
+                    modal.find("#fid").val(fid)
+                } else {
+                    // 新建
+                    modal.find('.error-msg').empty();   // 置空错误信息
+                    // document.getElementById('form').reset() // 置空表单
+                    $('#form')[0].reset();
+                }
             })
         }
 

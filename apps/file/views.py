@@ -47,8 +47,23 @@ def file(request, project_id):
             }
         )
 
-    # POST 添加文件夹 --> 上传到已有的文件夹中
-    form = FolderModelForm(request, parent_obj, data=request.POST)
+    # POST 添加文件夹 & 文件夹修改 --> 上传到已有的文件夹中
+    # 文件夹修改
+    fid = request.POST.get("fid")
+    edit_obj = None
+    if fid.isdecimal():
+        edit_obj = FileRepository.objects.filter(
+            id=int(fid),
+            file_type=2,
+            project=request.tracer.project
+        ).first()
+
+    if edit_obj:
+        form = FolderModelForm(request, parent_obj, data=request.POST, instance=edit_obj)
+    else:
+        form = FolderModelForm(request, parent_obj, data=request.POST)
+
+    # 新建文件夹
     if form.is_valid():
         form.instance.project = request.tracer.project
         form.instance.file_type = 2
