@@ -9,11 +9,12 @@ from .views import *
 from django.urls import include
 from django.conf.urls import url
 
+# 再做一次路由分发
 urlpatterns = [
-    url(r'dashboard', dashboard, name="dashboard"),
-    url(r'issues', issues, name="issues"),
-    url(r'statistics', statistics, name="statistics"),
-    url(r'file', file, name="file"),
-    url(r'^wiki/', include(('wiki.urls', "wiki"))),  # 再做一次路由分发
-    url(r'setting', setting, name="setting"),
+    url(r'^board/', include(('board.urls', "dashboard"))),
+    url(r'^issues/', include(('matter.urls', "issues"))),
+    url(r'^statistics/', include(('count.urls', "statistics"))),
+    url(r'^wiki/', include(('wiki.urls', "wiki"))),
+    url(r'^file/', include(('file.urls', "file"))),
+    url(r'^setting/', include(('instal.urls', "setting"))),
 ]

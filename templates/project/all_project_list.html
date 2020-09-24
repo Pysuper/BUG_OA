@@ -9,14 +9,14 @@
         {% if my %}
             <li><i class="fa fa-list" aria-hidden="true"></i> 我创建的项目</li>
             {% for item in my %}
-                <li><a href="{% url 'manages:dashboard' project_id=item.id %}">{{ item.name }}</a></li>
+                <li><a href="{% url 'manages:dashboard:home' project_id=item.id %}">{{ item.name }}</a></li>
             {% endfor %}
         {% endif %}
         {% if join %}
             <li role="separator" class="divider"></li>
             <li><i class="fa fa-handshake-o" aria-hidden="true"></i> 我参与的项目</li>
             {% for item in join %}
-                <li><a href="{% url 'manages:dashboard' project_id=item.value.id %}">{{ item.project.name }}</a></li>
+                <li><a href="{% url 'manages:dashboard:home' project_id=item.value.id %}">{{ item.project.name }}</a></li>
             {% endfor %}
         {% endif %}
         <li role="separator" class="divider"></li>

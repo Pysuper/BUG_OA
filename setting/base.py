@@ -41,6 +41,11 @@ INSTALLED_APPS = [
     'project.apps.ProjectConfig',
     'manages.apps.ManagesConfig',
     'wiki.apps.WikiConfig',
+    'file.apps.FileConfig',
+    'count.apps.CountConfig',
+    'board.apps.BoardConfig',
+    'instal.apps.InstalConfig',
+    'matter.apps.MatterConfig',
 
     'rest_framework',
 ]

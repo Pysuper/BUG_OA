@@ -29,22 +29,22 @@ def manage_menu_list(request):
     data_list = [
         {
             "title": "概述",
-            "url": reverse("manages:dashboard", kwargs={"project_id": project_id})
+            "url": reverse("manages:dashboard:home", kwargs={"project_id": project_id})
         }, {
             "title": "问题",
-            "url": reverse("manages:issues", kwargs={"project_id": project_id})
+            "url": reverse("manages:issues:home", kwargs={"project_id": project_id})
         }, {
             "title": "统计",
-            "url": reverse("manages:statistics", kwargs={"project_id": project_id})
+            "url": reverse("manages:statistics:home", kwargs={"project_id": project_id})
         }, {
             "title": "文件",
-            "url": reverse("manages:file", kwargs={"project_id": project_id})
+            "url": reverse("manages:file:home", kwargs={"project_id": project_id})
         }, {
             "title": "WiKi",
             "url": reverse("manages:wiki:home", kwargs={"project_id": project_id})
         }, {
             "title": "设置",
-            "url": reverse("manages:setting", kwargs={"project_id": project_id})
+            "url": reverse("manages:setting:home", kwargs={"project_id": project_id})
         },
     ]
 

@@ -36,12 +36,9 @@ class ProjectInfo(View):
     def post(self, request):
         form = ProjectModelForm(request, data=request.POST)
         if form.is_valid():
-            # 1. 为每个项目创建一个桶
-            bucket = "{}-{}-{}".format(
-                form.cleaned_data["name"],
-                request.tracer.user.phone,
-                str(int(time()))
-            ) + TENCENT_COS_API_KEY_ID
+            # 1. 为每个项目创建一个桶 --> 并为桶创建跨域规则
+
+            bucket = "{}-{}".format(request.tracer.user.phone, str(int(time()))) + TENCENT_COS_API_KEY_ID
             create_bucket(TENCENT_COS_REGION, bucket)
 
             # 2. 把桶和区域写入到数据库
