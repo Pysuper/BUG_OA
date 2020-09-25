@@ -10,4 +10,5 @@ from django.conf.urls import url
 
 urlpatterns = [
     url(r'^$', file, name="home"),
+    url(r'^delete/$', file_delete, name="delete"),
 ]

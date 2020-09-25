@@ -2,11 +2,13 @@ from django.forms import model_to_dict
 from django.http import JsonResponse
 from django.shortcuts import render
 
+from setting.variable import TENCENT_COS_REGION
+from utils.tencent.cos import delete_file
 from .file_forms import FolderModelForm
 from .models import FileRepository
 
-
 # Create your views here.
+"""View APIView ViewSet"""
 
 
 def file(request, project_id):
@@ -72,3 +74,39 @@ def file(request, project_id):
         form.save()
         return JsonResponse({"status": True})
     return JsonResponse({"status": False, "error": form.errors})
+
+
+def file_delete(request, project_id):
+    """删除文件"""
+    fid = request.GET.get("fid")
+
+    # 删除数据库中文件和文件夹的信息，级联删除
+    delete_obj = FileRepository.objects.filter(id=fid, project=request.tracer.project).first()
+
+    # 同时删除桶中的信息
+    if delete_obj.file_type == 1:
+        # 文件 --> 数据库删除，cos文件删除，项目已使用的空间容量返还
+
+        # 删除文件，将容量还给当前项目的已使用空间
+        request.tarcer.project.user_space -= delete_obj.file_size
+        request.tracer.project.save()
+
+        # COS中删除文件
+        delete_file(request.tracer.project.bucket, TENCENT_COS_REGION, delete_obj.key)
+
+        # 数据库中删除记录
+        delete_obj.delete()
+        return JsonResponse({"status": True})
+
+    # 文件夹 --> 找到当前文件夹中的所有文件 --> （数据库删除，cos文件删除，项目已使用的空间容量返还）
+    # 反向查询？！递归修改数据
+
+
+
+
+
+
+
+
+
+
