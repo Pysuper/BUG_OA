@@ -3,7 +3,7 @@ from django.http import JsonResponse
 from django.shortcuts import render
 
 from setting.variable import TENCENT_COS_REGION
-from utils.tencent.cos import delete_file
+from utils.tencent.cos import delete_file, delete_file_list
 from .file_forms import FolderModelForm
 from .models import FileRepository
 
@@ -96,17 +96,31 @@ def file_delete(request, project_id):
 
         # 数据库中删除记录
         delete_obj.delete()
-        return JsonResponse({"status": True})
 
     # 文件夹 --> 找到当前文件夹中的所有文件 --> （数据库删除，cos文件删除，项目已使用的空间容量返还）
     # 反向查询？！递归修改数据
+    total_size = 0
+    key_list = []
+    folder_list = [delete_obj, ]
+    for folder in folder_list:
+        child_list = FileRepository.objects.filter(project=request.tracer.project, parent=folder).order_by('-file_type')
+        for child in child_list:  # 遍历文件和文件夹
+            if child.file_type == 2:
+                folder_list.append(child)
+            else:
+                # 这个时候-->处理文件
+                total_size += child.file_type
+                # delete_file(request.tracer.project.bucket, request.tracer.project.region, child.key)
+                key_list.append({"Key": child.key})
 
+    # COS批量删除文件
+    if key_list:
+        delete_file_list(request.tracer.project.bucket, request.tracer.project.region, key_list)
 
+    # 归还文件大小
+    if total_size:
+        request.tarcer.project.user_space -= delete_obj.file_size
+        request.tracer.project.save()
 
-
-
-
-
-
-
-
+    delete_obj.delete()
+    return JsonResponse({"status": True})
