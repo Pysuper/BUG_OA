@@ -11,4 +11,6 @@ from django.conf.urls import url
 urlpatterns = [
     url(r'^$', file, name="home"),
     url(r'^delete/$', file_delete, name="delete"),
+    url(r'^upload/$', file_upload, name="upload"),
+    url(r'^cos/credential/$', cos_credential, name="credential"),
 ]

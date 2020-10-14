@@ -1,10 +1,13 @@
+import json
+
 from django.forms import model_to_dict
 from django.http import JsonResponse
 from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
 
 from setting.variable import TENCENT_COS_REGION
-from utils.tencent.cos import delete_file, delete_file_list
-from .file_forms import FolderModelForm
+from utils.tencent.cos import delete_file, delete_file_list, credential
+from .file_forms import FolderModelForm, FileModelForm
 from .models import FileRepository
 
 # Create your views here.
@@ -43,9 +46,10 @@ def file(request, project_id):
         return render(
             request, 'manages/file/file.html',
             {
-                'form': form,
+                "form": form,
                 "file_obj_list": file_obj_list,
                 "breadcrumb_list": breadcrumb_list,
+                "folder_obj": parent_obj,  # 当前访问的文件目录
             }
         )
 
@@ -124,3 +128,45 @@ def file_delete(request, project_id):
 
     delete_obj.delete()
     return JsonResponse({"status": True})
+
+
+@csrf_exempt
+def file_upload(request, project_id):
+    """文件上传完成之后，从前端接受到文件信息，并写入数据库"""
+    # 使用modelform进行校验
+    form = FileModelForm(request, data=request.POST)
+    if form.is_valid():
+        pass
+
+    # 根据key和etag再去桶中校验数据
+    return JsonResponse({"data": "OK!"})
+
+
+@csrf_exempt
+def cos_credential(request, project_id):
+    """获取cos上传时的临时凭证"""
+    # 向前端返回临时凭证的时候，做容量限制：单文件&多文件
+
+    # 获取要上传的每个文件&文件大小
+    # 这里接受的是一个前端经JSON处理的data ==> json.loads()
+    total_size = 0
+    file_list = json.loads(request.body.decode('utf-8'))
+    per_file_max = request.tracer.price_policy.per_file_size * 1024 * 1024
+    # 首先校验当文件大小限制
+    for item in file_list:
+        if item["size"] > per_file_max:
+            return JsonResponse({
+                "status": False,
+                "error": "当文件超出限制：{}， 最大{}M，".format(item["name"], request.tracer.price_policy.per_file_size),
+                "a_info": "请升级会员！"
+            })
+        total_size += item["size"]
+
+    # 单个文件没有超出限制的话，查看总容量
+    more_max = request.tracer.price_policy.project_space * 1024 * 1024 * 1024  # 项目的允许空间
+    use_now = request.tracer.project.user_space  # 项目已使用空间
+    if use_now + total_size > more_max:
+        return JsonResponse({"status": False, "error": "容量超出限制，请升级会员！", "src": "请升级会员！"})
+
+    data = credential(request.tracer.project.bucket, request.tracer.project.region)
+    return JsonResponse({"status": True, "data": data})

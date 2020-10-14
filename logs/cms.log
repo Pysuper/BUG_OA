@@ -1,0 +1,458 @@
+INFO 2020-10-13 01:30:42,438 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 01:30:47,200 basehttp 154 [32m[32m"GET / HTTP/1.1" 200 2585[0m[0m
+INFO 2020-10-13 01:30:48,931 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 01:30:51,018 basehttp 154 [32m[32m"GET /project/list/ HTTP/1.1" 200 11499[0m[0m
+INFO 2020-10-13 01:30:51,421 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 01:30:52,733 basehttp 154 [32m[32m"GET /manage/13/board/ HTTP/1.1" 200 3486[0m[0m
+INFO 2020-10-13 01:30:53,075 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 01:30:54,196 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 13517[0m[0m
+INFO 2020-10-13 01:30:54,277 basehttp 154 [32m[32m"GET /static/js/cos-js-sdk-v5.js HTTP/1.1" 304 0[0m[0m
+INFO 2020-10-13 01:30:54,538 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 01:31:33,334 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 13522[0m[0m
+INFO 2020-10-13 01:31:33,826 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 01:31:33,834 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 01:34:27,008 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/views.py changed, reloading.[0m[0m
+INFO 2020-10-13 01:34:27,459 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 01:44:56,735 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/views.py changed, reloading.[0m[0m
+INFO 2020-10-13 01:44:58,120 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 01:46:08,054 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/views.py changed, reloading.[0m[0m
+INFO 2020-10-13 01:46:08,534 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 01:46:43,059 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/views.py changed, reloading.[0m[0m
+INFO 2020-10-13 01:46:43,540 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 01:46:54,904 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/views.py changed, reloading.[0m[0m
+INFO 2020-10-13 01:46:55,413 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 01:47:00,757 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 13540[0m[0m
+INFO 2020-10-13 01:47:01,311 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 01:47:01,321 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 01:50:25,767 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 13399[0m[0m
+INFO 2020-10-13 01:50:26,254 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 01:50:26,265 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 01:53:25,819 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/views.py changed, reloading.[0m[0m
+INFO 2020-10-13 01:53:26,507 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 01:53:41,884 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/views.py changed, reloading.[0m[0m
+INFO 2020-10-13 01:53:42,357 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 01:54:16,534 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/views.py changed, reloading.[0m[0m
+INFO 2020-10-13 01:54:17,077 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 01:56:10,573 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/views.py changed, reloading.[0m[0m
+INFO 2020-10-13 01:56:11,060 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 01:57:10,449 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/views.py changed, reloading.[0m[0m
+INFO 2020-10-13 01:57:10,957 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 01:57:39,846 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/views.py changed, reloading.[0m[0m
+INFO 2020-10-13 01:57:40,341 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 01:58:06,996 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/views.py changed, reloading.[0m[0m
+INFO 2020-10-13 01:58:07,418 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 01:59:23,822 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/views.py changed, reloading.[0m[0m
+INFO 2020-10-13 01:59:24,208 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 02:00:47,996 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/views.py changed, reloading.[0m[0m
+INFO 2020-10-13 02:00:48,472 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 02:02:20,100 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/views.py changed, reloading.[0m[0m
+INFO 2020-10-13 02:02:20,591 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 02:10:46,410 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/views.py changed, reloading.[0m[0m
+INFO 2020-10-13 02:10:46,849 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 02:11:24,253 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/views.py changed, reloading.[0m[0m
+INFO 2020-10-13 02:11:24,791 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 02:15:01,926 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/views.py changed, reloading.[0m[0m
+INFO 2020-10-13 02:15:02,394 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 02:17:52,967 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/views.py changed, reloading.[0m[0m
+INFO 2020-10-13 02:17:53,377 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 02:18:11,561 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/views.py changed, reloading.[0m[0m
+INFO 2020-10-13 02:18:12,114 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 02:18:40,544 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/views.py changed, reloading.[0m[0m
+INFO 2020-10-13 02:18:41,166 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 02:23:21,900 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/transac/models.py changed, reloading.[0m[0m
+INFO 2020-10-13 02:23:22,503 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 02:23:36,985 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/views.py changed, reloading.[0m[0m
+INFO 2020-10-13 02:23:37,458 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 02:29:07,750 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 02:29:11,746 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 13706[0m[0m
+INFO 2020-10-13 02:29:12,370 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 02:29:12,387 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 02:29:17,759 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 720[0m[0m
+INFO 2020-10-13 02:29:17,762 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 741[0m[0m
+INFO 2020-10-13 02:29:40,572 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 13706[0m[0m
+INFO 2020-10-13 02:29:41,640 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 02:29:41,655 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 02:29:44,521 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 741[0m[0m
+INFO 2020-10-13 02:29:44,523 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 741[0m[0m
+INFO 2020-10-13 02:29:58,853 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 02:30:05,373 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 13710[0m[0m
+INFO 2020-10-13 02:30:06,285 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 02:30:06,295 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 02:30:11,892 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 741[0m[0m
+INFO 2020-10-13 02:30:11,893 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 741[0m[0m
+INFO 2020-10-13 02:31:03,531 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 02:31:06,843 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 13705[0m[0m
+INFO 2020-10-13 02:31:07,443 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 02:31:07,454 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 02:31:12,216 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 741[0m[0m
+INFO 2020-10-13 02:31:12,216 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 741[0m[0m
+INFO 2020-10-13 02:39:11,308 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15081[0m[0m
+INFO 2020-10-13 02:39:11,793 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 02:39:11,809 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 02:39:18,275 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15024[0m[0m
+INFO 2020-10-13 02:39:18,977 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 02:39:19,002 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 02:39:27,688 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15024[0m[0m
+INFO 2020-10-13 02:39:28,056 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 02:39:28,063 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 02:39:29,493 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15024[0m[0m
+INFO 2020-10-13 02:39:29,792 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 02:39:29,800 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 02:54:08,613 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 02:54:11,251 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15253[0m[0m
+INFO 2020-10-13 02:54:11,773 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 02:54:11,783 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 02:54:19,879 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 741[0m[0m
+INFO 2020-10-13 02:56:32,194 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 741[0m[0m
+INFO 2020-10-13 02:58:46,449 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15262[0m[0m
+INFO 2020-10-13 02:58:47,165 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 02:58:47,179 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 02:58:51,801 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 741[0m[0m
+INFO 2020-10-13 02:58:51,977 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 720[0m[0m
+INFO 2020-10-13 02:58:51,977 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 741[0m[0m
+INFO 2020-10-13 02:58:52,600 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 741[0m[0m
+INFO 2020-10-13 03:07:40,999 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15324[0m[0m
+INFO 2020-10-13 03:07:41,456 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 03:07:41,471 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 03:08:20,970 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 142[0m[0m
+INFO 2020-10-13 03:08:42,502 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15319[0m[0m
+INFO 2020-10-13 03:08:43,044 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 03:08:43,058 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 03:08:48,840 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 142[0m[0m
+INFO 2020-10-13 03:11:14,545 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15450[0m[0m
+INFO 2020-10-13 03:11:15,091 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 03:11:15,109 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 03:11:33,279 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15471[0m[0m
+INFO 2020-10-13 03:11:34,735 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 03:11:34,748 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 03:12:58,449 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/views.py changed, reloading.[0m[0m
+INFO 2020-10-13 03:12:58,926 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 03:20:08,670 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15768[0m[0m
+INFO 2020-10-13 03:20:09,303 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 03:20:09,312 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 03:20:12,280 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 195[0m[0m
+INFO 2020-10-13 03:20:26,094 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15770[0m[0m
+INFO 2020-10-13 03:20:26,757 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 03:20:26,769 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 03:20:29,485 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 195[0m[0m
+INFO 2020-10-13 03:20:50,312 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15715[0m[0m
+INFO 2020-10-13 03:20:50,867 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 03:20:50,889 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 03:20:54,589 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 195[0m[0m
+INFO 2020-10-13 03:21:42,719 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15675[0m[0m
+INFO 2020-10-13 03:21:43,268 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 03:21:43,281 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 03:21:46,102 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 195[0m[0m
+INFO 2020-10-13 03:23:21,570 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15675[0m[0m
+INFO 2020-10-13 03:23:22,210 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 03:23:22,229 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 03:23:25,555 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 195[0m[0m
+INFO 2020-10-13 03:24:00,269 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15678[0m[0m
+INFO 2020-10-13 03:24:00,967 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 03:24:00,977 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 03:24:04,323 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 195[0m[0m
+INFO 2020-10-13 03:24:37,646 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15688[0m[0m
+INFO 2020-10-13 03:24:38,229 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 03:24:38,250 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 03:24:43,950 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 195[0m[0m
+INFO 2020-10-13 03:25:19,661 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15727[0m[0m
+INFO 2020-10-13 03:25:20,236 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 03:25:20,253 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 03:25:23,072 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 195[0m[0m
+INFO 2020-10-13 03:26:33,289 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15729[0m[0m
+INFO 2020-10-13 03:26:33,945 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 03:26:33,972 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 03:26:37,180 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 195[0m[0m
+INFO 2020-10-13 03:27:01,167 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 03:27:09,214 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15720[0m[0m
+INFO 2020-10-13 03:27:09,880 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 03:27:09,894 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 03:27:12,443 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 195[0m[0m
+INFO 2020-10-13 04:51:00,031 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 04:51:02,720 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15720[0m[0m
+INFO 2020-10-13 04:51:02,878 basehttp 154 [32m[32m"GET /static/js/cos-js-sdk-v5.js HTTP/1.1" 304 0[0m[0m
+INFO 2020-10-13 04:51:03,454 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 04:51:03,471 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 04:51:07,752 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 195[0m[0m
+INFO 2020-10-13 04:51:23,294 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15720[0m[0m
+INFO 2020-10-13 04:51:23,829 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 04:51:23,854 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 04:51:57,220 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15739[0m[0m
+INFO 2020-10-13 04:51:57,967 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 04:51:57,983 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 04:53:01,328 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15750[0m[0m
+INFO 2020-10-13 04:53:02,098 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 04:53:02,108 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 04:53:05,100 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 195[0m[0m
+INFO 2020-10-13 04:53:21,898 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15797[0m[0m
+INFO 2020-10-13 04:53:22,953 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 04:53:22,971 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 04:53:25,543 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 195[0m[0m
+INFO 2020-10-13 04:53:52,485 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15802[0m[0m
+INFO 2020-10-13 04:53:53,128 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 04:53:53,144 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 04:53:55,668 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 195[0m[0m
+INFO 2020-10-13 04:54:30,454 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15802[0m[0m
+INFO 2020-10-13 04:54:30,999 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 04:54:31,020 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 04:54:38,927 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15814[0m[0m
+INFO 2020-10-13 04:54:39,574 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 04:54:39,587 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 04:55:47,225 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15821[0m[0m
+INFO 2020-10-13 04:55:48,178 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 04:55:48,186 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 04:55:51,860 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 195[0m[0m
+INFO 2020-10-13 04:56:22,058 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15806[0m[0m
+INFO 2020-10-13 04:56:22,741 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 04:56:22,777 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 04:56:27,063 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 195[0m[0m
+INFO 2020-10-13 04:56:41,266 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15812[0m[0m
+INFO 2020-10-13 04:56:41,915 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 04:56:41,934 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 04:56:46,205 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 195[0m[0m
+INFO 2020-10-13 04:57:16,177 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15891[0m[0m
+INFO 2020-10-13 04:57:16,767 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 04:57:16,781 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 04:57:20,102 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 195[0m[0m
+INFO 2020-10-13 04:58:00,516 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 04:58:03,409 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15865[0m[0m
+INFO 2020-10-13 04:58:03,963 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 04:58:03,971 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 04:58:07,951 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 198[0m[0m
+INFO 2020-10-13 04:59:23,983 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15915[0m[0m
+INFO 2020-10-13 04:59:24,487 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 04:59:24,505 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 04:59:39,488 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15916[0m[0m
+INFO 2020-10-13 04:59:40,194 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 04:59:40,228 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 04:59:44,798 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 198[0m[0m
+INFO 2020-10-13 05:00:52,777 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15877[0m[0m
+INFO 2020-10-13 05:00:53,421 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 05:00:53,427 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 05:01:14,845 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15849[0m[0m
+INFO 2020-10-13 05:01:15,536 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 05:01:15,563 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 05:01:18,645 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 198[0m[0m
+INFO 2020-10-13 05:02:10,606 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 15849[0m[0m
+INFO 2020-10-13 05:02:11,237 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 05:02:11,249 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 05:02:14,446 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 198[0m[0m
+INFO 2020-10-13 05:04:11,455 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 16018[0m[0m
+INFO 2020-10-13 05:04:12,075 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 05:04:12,092 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 05:04:27,364 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 16019[0m[0m
+INFO 2020-10-13 05:04:27,910 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 05:04:27,922 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 05:04:47,730 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 16023[0m[0m
+INFO 2020-10-13 05:04:48,455 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 05:04:48,483 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 05:05:03,851 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 16022[0m[0m
+INFO 2020-10-13 05:05:04,695 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 05:05:04,714 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 05:05:06,999 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 198[0m[0m
+INFO 2020-10-13 05:07:46,364 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 16040[0m[0m
+INFO 2020-10-13 05:07:47,089 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 05:07:47,102 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 05:08:02,047 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 198[0m[0m
+INFO 2020-10-13 05:08:48,296 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 16177[0m[0m
+INFO 2020-10-13 05:08:48,843 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 05:08:48,854 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 05:08:51,866 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 198[0m[0m
+INFO 2020-10-13 05:09:08,815 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 16177[0m[0m
+INFO 2020-10-13 05:09:09,466 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 05:09:09,488 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 05:09:11,904 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 198[0m[0m
+INFO 2020-10-13 05:09:23,818 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 05:10:54,187 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 16182[0m[0m
+INFO 2020-10-13 05:10:54,717 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 05:10:54,739 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 05:12:19,111 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 16307[0m[0m
+INFO 2020-10-13 05:12:19,776 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 05:12:19,796 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 05:12:34,292 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 741[0m[0m
+INFO 2020-10-13 06:14:58,926 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 06:15:01,702 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 17429[0m[0m
+INFO 2020-10-13 06:15:02,464 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 06:15:02,486 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 06:16:17,286 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 17428[0m[0m
+INFO 2020-10-13 06:16:17,910 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-13 06:16:17,923 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-13 06:16:23,884 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 741[0m[0m
+INFO 2020-10-13 06:18:10,009 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-13 06:20:10,396 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/views.py changed, reloading.[0m[0m
+INFO 2020-10-13 06:20:11,096 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-14 01:09:20,975 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-14 01:09:33,177 basehttp 154 [32m[32m"GET / HTTP/1.1" 200 2585[0m[0m
+INFO 2020-10-14 01:09:33,356 basehttp 154 [32m[32m"GET /static/plugin/bootstrap/css/bootstrap.css HTTP/1.1" 200 146010[0m[0m
+INFO 2020-10-14 01:09:33,358 basehttp 154 [32m[32m"GET /static/plugin/font-awesome/css/font-awesome.min.css HTTP/1.1" 200 31000[0m[0m
+INFO 2020-10-14 01:09:33,534 basehttp 154 [32m[32m"GET /static/plugin/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 37045[0m[0m
+INFO 2020-10-14 01:09:33,537 basehttp 154 [32m[32m"GET /static/js/jquery-3.4.1.js HTTP/1.1" 200 149581[0m[0m
+INFO 2020-10-14 01:09:33,547 basehttp 154 [32m[32m"GET /static/img/index/index-2.png HTTP/1.1" 200 117490[0m[0m
+INFO 2020-10-14 01:09:33,550 basehttp 154 [32m[32m"GET /static/img/index/index-3.png HTTP/1.1" 200 432502[0m[0m
+INFO 2020-10-14 01:09:33,554 basehttp 154 [32m[32m"GET /static/img/index/index-1.png HTTP/1.1" 200 435962[0m[0m
+INFO 2020-10-14 01:09:33,554 basehttp 154 [32m[32m"GET /static/img/index/index-4.png HTTP/1.1" 200 233440[0m[0m
+INFO 2020-10-14 01:09:34,001 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-14 01:09:34,060 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-14 01:09:36,220 basehttp 154 [32m[32m"GET /project/list/ HTTP/1.1" 200 11499[0m[0m
+INFO 2020-10-14 01:09:36,349 basehttp 154 [32m[32m"GET /static/css/base_after.css HTTP/1.1" 200 3389[0m[0m
+INFO 2020-10-14 01:09:36,353 basehttp 154 [32m[32m"GET /static/plugin/font-awesome/css/font-awesome.css HTTP/1.1" 200 37414[0m[0m
+INFO 2020-10-14 01:09:36,351 basehttp 154 [32m[32m"GET /static/css/account.css HTTP/1.1" 200 491[0m[0m
+INFO 2020-10-14 01:09:36,360 basehttp 154 [32m[32m"GET /static/plugin/bootstrap/js/bootstrap.js HTTP/1.1" 200 69707[0m[0m
+INFO 2020-10-14 01:09:36,610 basehttp 154 [32m[32m"GET /static/plugin/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160[0m[0m
+INFO 2020-10-14 01:09:36,662 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-14 01:09:37,471 basehttp 154 [32m[32m"GET /manage/13/board/ HTTP/1.1" 200 3486[0m[0m
+INFO 2020-10-14 01:09:37,811 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-14 01:09:39,714 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 17555[0m[0m
+INFO 2020-10-14 01:09:39,802 basehttp 154 [32m[32m"GET /static/js/cos-js-sdk-v5.js HTTP/1.1" 200 122433[0m[0m
+INFO 2020-10-14 01:09:40,054 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-14 01:09:43,594 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 720[0m[0m
+ERROR 2020-10-14 01:09:44,827 log 228 [31m[31mInternal Server Error: /manage/13/file/upload/[0m[0m
+Traceback (most recent call last):
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/zheng/Documents/Project/BUG_OA/apps/file/views.py", line 138, in file_upload
+    if form.is_valid():
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/forms/forms.py", line 185, in is_valid
+    return self.is_bound and not self.errors
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/forms/forms.py", line 180, in errors
+    self.full_clean()
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/forms/forms.py", line 382, in full_clean
+    self._clean_form()
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/forms/forms.py", line 409, in _clean_form
+    cleaned_data = self.clean()
+  File "/home/zheng/Documents/Project/BUG_OA/apps/file/file_forms.py", line 64, in clean
+    etag = self.cleaned_data["etag"]
+KeyError: 'etag'
+ERROR 2020-10-14 01:09:44,828 basehttp 154 [31m[31m"POST /manage/13/file/upload/ HTTP/1.1" 500 17764[0m[0m
+INFO 2020-10-14 01:09:58,527 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-14 01:10:13,713 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 17555[0m[0m
+INFO 2020-10-14 01:10:14,113 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-14 01:10:14,126 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-14 01:10:21,032 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 741[0m[0m
+ERROR 2020-10-14 01:10:21,663 log 228 [31m[31mInternal Server Error: /manage/13/file/upload/[0m[0m
+Traceback (most recent call last):
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/zheng/Documents/Project/BUG_OA/apps/file/views.py", line 138, in file_upload
+    if form.is_valid():
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/forms/forms.py", line 185, in is_valid
+    return self.is_bound and not self.errors
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/forms/forms.py", line 180, in errors
+    self.full_clean()
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/forms/forms.py", line 382, in full_clean
+    self._clean_form()
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/forms/forms.py", line 409, in _clean_form
+    cleaned_data = self.clean()
+  File "/home/zheng/Documents/Project/BUG_OA/apps/file/file_forms.py", line 64, in clean
+    etag = self.cleaned_data["ETag"]
+KeyError: 'ETag'
+ERROR 2020-10-14 01:10:21,664 basehttp 154 [31m[31m"POST /manage/13/file/upload/ HTTP/1.1" 500 17779[0m[0m
+INFO 2020-10-14 01:12:54,477 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/file_forms.py changed, reloading.[0m[0m
+INFO 2020-10-14 01:12:55,106 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-14 01:12:59,837 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 17555[0m[0m
+INFO 2020-10-14 01:13:00,250 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-14 01:13:00,261 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-14 01:13:05,373 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 741[0m[0m
+ERROR 2020-10-14 01:13:05,997 log 228 [31m[31mInternal Server Error: /manage/13/file/upload/[0m[0m
+Traceback (most recent call last):
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/zheng/Documents/Project/BUG_OA/apps/file/views.py", line 138, in file_upload
+    if form.is_valid():
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/forms/forms.py", line 185, in is_valid
+    return self.is_bound and not self.errors
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/forms/forms.py", line 180, in errors
+    self.full_clean()
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/forms/forms.py", line 382, in full_clean
+    self._clean_form()
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/forms/forms.py", line 409, in _clean_form
+    cleaned_data = self.clean()
+  File "/home/zheng/Documents/Project/BUG_OA/apps/file/file_forms.py", line 64, in clean
+    etag = self.cleaned_data["etag"]
+KeyError: 'etag'
+ERROR 2020-10-14 01:13:05,997 basehttp 154 [31m[31m"POST /manage/13/file/upload/ HTTP/1.1" 500 17779[0m[0m
+INFO 2020-10-14 01:13:14,996 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-14 01:13:17,920 basehttp 154 [32m[32m"GET /static/plugin/bootstrap/css/bootstrap.css.map HTTP/1.1" 200 389287[0m[0m
+INFO 2020-10-14 01:14:17,222 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-14 01:14:25,327 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 17555[0m[0m
+INFO 2020-10-14 01:14:25,898 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-14 01:14:25,917 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-14 01:14:31,583 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 741[0m[0m
+ERROR 2020-10-14 01:14:32,117 log 228 [31m[31mInternal Server Error: /manage/13/file/upload/[0m[0m
+Traceback (most recent call last):
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/zheng/Documents/Project/BUG_OA/apps/file/views.py", line 139, in file_upload
+    if form.is_valid():
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/forms/forms.py", line 185, in is_valid
+    return self.is_bound and not self.errors
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/forms/forms.py", line 180, in errors
+    self.full_clean()
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/forms/forms.py", line 382, in full_clean
+    self._clean_form()
+  File "/home/zheng/.virtualenvs/DeBUG/lib/python3.5/site-packages/django/forms/forms.py", line 409, in _clean_form
+    cleaned_data = self.clean()
+  File "/home/zheng/Documents/Project/BUG_OA/apps/file/file_forms.py", line 64, in clean
+    etag = self.cleaned_data["etag"]
+KeyError: 'etag'
+ERROR 2020-10-14 01:14:32,117 basehttp 154 [31m[31m"POST /manage/13/file/upload/ HTTP/1.1" 500 17778[0m[0m
+INFO 2020-10-14 01:15:25,019 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-14 01:15:33,141 basehttp 154 [32m[32m"GET /manage/13/file/ HTTP/1.1" 200 17555[0m[0m
+INFO 2020-10-14 01:15:34,565 basehttp 154 [32m[32m"GET /favicon.ico HTTP/1.1" 302 0[0m[0m
+INFO 2020-10-14 01:15:34,583 basehttp 154 [32m[32m"GET /static/img/favicon.ico HTTP/1.1" 200 178075[0m[0m
+INFO 2020-10-14 01:15:39,751 basehttp 154 [32m[32m"POST /manage/13/file/cos/credential/ HTTP/1.1" 200 741[0m[0m
+INFO 2020-10-14 01:15:40,613 basehttp 154 [32m[32m"POST /manage/13/file/upload/ HTTP/1.1" 200 15[0m[0m
+INFO 2020-10-14 01:15:55,110 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/views.py changed, reloading.[0m[0m
+INFO 2020-10-14 01:15:55,518 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-14 01:19:47,281 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/file_forms.py changed, reloading.[0m[0m
+INFO 2020-10-14 01:19:47,861 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-14 01:20:01,115 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/file_forms.py changed, reloading.[0m[0m
+INFO 2020-10-14 01:20:01,708 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-14 01:20:37,436 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/file_forms.py changed, reloading.[0m[0m
+INFO 2020-10-14 01:20:37,941 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-14 01:21:02,421 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/file_forms.py changed, reloading.[0m[0m
+INFO 2020-10-14 01:21:02,961 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-14 01:21:08,611 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/file_forms.py changed, reloading.[0m[0m
+INFO 2020-10-14 01:21:09,190 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-14 01:21:14,776 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/file_forms.py changed, reloading.[0m[0m
+INFO 2020-10-14 01:21:15,414 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-14 01:21:26,276 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/file_forms.py changed, reloading.[0m[0m
+INFO 2020-10-14 01:21:26,809 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-14 01:22:26,605 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/file_forms.py changed, reloading.[0m[0m
+INFO 2020-10-14 01:22:27,085 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-14 01:23:07,127 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/file_forms.py changed, reloading.[0m[0m
+INFO 2020-10-14 01:23:07,666 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-14 01:23:45,056 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/file_forms.py changed, reloading.[0m[0m
+INFO 2020-10-14 01:23:45,634 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-14 01:23:58,237 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/file_forms.py changed, reloading.[0m[0m
+INFO 2020-10-14 01:23:59,034 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-14 01:24:34,641 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/file_forms.py changed, reloading.[0m[0m
+INFO 2020-10-14 01:24:35,108 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-14 01:25:57,126 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/file_forms.py changed, reloading.[0m[0m
+INFO 2020-10-14 01:25:57,770 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m
+INFO 2020-10-14 01:28:37,127 autoreload 217 [32m[32m/home/zheng/Documents/Project/BUG_OA/apps/file/file_forms.py changed, reloading.[0m[0m
+INFO 2020-10-14 01:28:37,706 autoreload 597 [32m[32mWatching for file changes with StatReloader[0m[0m

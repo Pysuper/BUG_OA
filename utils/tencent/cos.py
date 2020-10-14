@@ -134,7 +134,6 @@ def credential(bucket, region):
             # "name/cos:AbortMultipartUpload",
             "*",
         ],
-
     }
 
     sts = Sts(config)
