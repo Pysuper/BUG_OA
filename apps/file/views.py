@@ -136,7 +136,13 @@ def file_upload(request, project_id):
     # 使用modelform进行校验
     form = FileModelForm(request, data=request.POST)
     if form.is_valid():
-        pass
+        # 校验通过，数据写入数据库
+
+        # 通过ModelForm.save()写入数据库中的数据返回的instance对象，无法通过get_xx_display获取到choices中的中文
+        form.instance.file_type = 1
+        form.instance.update_user = request.tracer.user
+        instance = form.save()  # 添加成功之后，获取到新增加的对象
+        ...
 
     # 根据key和etag再去桶中校验数据
     return JsonResponse({"data": "OK!"})
