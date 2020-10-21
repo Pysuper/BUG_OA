@@ -1,10 +1,12 @@
 import json
 
+import requests
 from django.forms import model_to_dict
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
+from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
-
+from django.utils.encoding import escape_uri_path
 from setting.variable import TENCENT_COS_REGION
 from utils.tencent.cos import delete_file, delete_file_list, credential
 from .file_forms import FolderModelForm, FileModelForm
@@ -43,6 +45,19 @@ def file(request, project_id):
             file_obj_list = query_set.filter(parent__isnull=True)
 
         form = FolderModelForm(request, parent_obj)
+
+        # 修改文件大小的显示
+        for file_obj in file_obj_list:
+            if file_obj.file_type == 1:
+                size = int(file_obj.file_size)
+                if 1024 < size <= 1024 * 1024:
+                    size = str("%.1f" % (size / 1024)) + " KB"
+                elif 1024 * 1024 < size <= 1024 * 1024 * 1024:
+                    size = str("%.1f" % (size / (1024 * 1024)) + " M")
+                elif 1024 * 1024 * 1024 < size:
+                    size = str("%.1f" % (size / (1024 * 1024 * 1024)) + " G")
+                file_obj.file_size = size
+
         return render(
             request, 'manages/file/file.html',
             {
@@ -92,7 +107,7 @@ def file_delete(request, project_id):
         # 文件 --> 数据库删除，cos文件删除，项目已使用的空间容量返还
 
         # 删除文件，将容量还给当前项目的已使用空间
-        request.tarcer.project.user_space -= delete_obj.file_size
+        request.tracer.project.user_space -= delete_obj.file_size
         request.tracer.project.save()
 
         # COS中删除文件
@@ -100,6 +115,8 @@ def file_delete(request, project_id):
 
         # 数据库中删除记录
         delete_obj.delete()
+
+        return JsonResponse({"status": True})
 
     # 文件夹 --> 找到当前文件夹中的所有文件 --> （数据库删除，cos文件删除，项目已使用的空间容量返还）
     # 反向查询？！递归修改数据
@@ -135,17 +152,64 @@ def file_upload(request, project_id):
     """文件上传完成之后，从前端接受到文件信息，并写入数据库"""
     # 使用modelform进行校验
     form = FileModelForm(request, data=request.POST)
+
+    # 根据key和etag再去桶中校验数据
     if form.is_valid():
         # 校验通过，数据写入数据库
 
         # 通过ModelForm.save()写入数据库中的数据返回的instance对象，无法通过get_xx_display获取到choices中的中文
-        form.instance.file_type = 1
-        form.instance.update_user = request.tracer.user
-        instance = form.save()  # 添加成功之后，获取到新增加的对象
-        ...
+        # form.instance.file_type = 1
+        # form.instance.update_user = request.tracer.user
+        # instance = form.save()  # 添加成功之后，获取到新增加的对象
 
-    # 根据key和etag再去桶中校验数据
-    return JsonResponse({"data": "OK!"})
+        # 通过验证写入数据库
+        data_dict = form.cleaned_data  # 验证通过之后的字典
+        data_dict.pop("etag")
+        data_dict.update({
+            "project": request.tracer.project,
+            "file_type": 1,
+            "update_user": request.tracer.user
+        })
+        instance = FileRepository.objects.create(**data_dict)
+
+        # 更新项目的已使用空间
+        request.tracer.project.user_space += data_dict["file_size"]
+        request.tracer.project.save()
+
+        size = instance.file_size
+        if 1024 < size < 1024 * 1024:
+            size = str("%.1f" % (size / 1024)) + " KB"
+        elif 1024 * 1024 < size < 1024 * 1024 * 1024:
+            size = str("%.1f" % (size / (1024 * 1024)) + " M")
+        elif 1024 * 1024 * 1024 < size:
+            size = str("%.1f" % (size / (1024 * 1024 * 1024)) + " G")
+
+        result = {
+            "id": instance.id,
+            "name": instance.name,
+            "file_size": size,
+            "username": instance.update_user.username,
+            "datetime": instance.update_time.strftime("%Y年%m月%d日 %H:%M"),
+            "download_url": reverse("manages:file:download", kwargs={"project_id": project_id, "file_id": instance.id})
+            # "file_type": instance.get_file_type_display()
+        }
+        return JsonResponse({"status": True, "data": result})
+    return JsonResponse({"status": False, "data": "文件错误！"})
+
+
+def file_download(request, project_id, file_id):
+    """下载文件"""
+
+    # 获取到文件
+    file = FileRepository.objects.filter(id=file_id, project_id=project_id).first()
+
+    # 去COS打开文件
+    content = requests.get(file.file_path).content
+
+    # 返回文件内容，设置响应头
+    response = HttpResponse(content, content_type="application/octet-stream")
+    response["Content-Disposition"] = "attachment; filename={}".format(escape_uri_path(file.name))
+    return response
 
 
 @csrf_exempt

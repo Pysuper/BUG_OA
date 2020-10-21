@@ -9,7 +9,7 @@ class Project(models.Model):
     name = models.CharField(verbose_name="项目名称", max_length=32)
     color = models.SmallIntegerField(verbose_name="颜色", choices=COLOR_CHOICES, default=1)
     desc = models.CharField(verbose_name="项目描述", max_length=25, null=True, blank=True)
-    user_space = models.IntegerField(verbose_name="项目已使用空间", default=0)
+    user_space = models.BigIntegerField(verbose_name="项目已使用空间", default=0)  # 使用大的空间存储
     star = models.BooleanField(verbose_name="星标", default=0)
 
     # 为每一个项目在COS中创建一个桶

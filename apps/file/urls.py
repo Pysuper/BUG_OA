@@ -12,5 +12,6 @@ urlpatterns = [
     url(r'^$', file, name="home"),
     url(r'^delete/$', file_delete, name="delete"),
     url(r'^upload/$', file_upload, name="upload"),
+    url(r'^download/(?P<file_id>\d+)/$', file_download, name="download"),
     url(r'^cos/credential/$', cos_credential, name="credential"),
 ]

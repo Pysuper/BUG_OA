@@ -10,4 +10,5 @@ from django.conf.urls import url
 
 urlpatterns = [
     url(r'^$', instal, name="home"),
+    url(r'^delete/$', Delete.as_view(), name="delete"),  # 类视图
 ]
